@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "EVPlayV2",
+    "slug": "EVPlayV2",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "EVPlayV2"
+}
