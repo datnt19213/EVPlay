@@ -1,6 +1,5 @@
-import {StatusBar} from "expo-status-bar";
 import React from "react";
-import {StyleSheet, View} from "react-native";
+import {StyleSheet, View, StatusBar} from "react-native";
 import * as ScreenOrientation from "expo-screen-orientation";
 import * as NavigationBar from "expo-navigation-bar";
 import SpriteSheet from "rn-sprite-sheet";
@@ -23,18 +22,18 @@ export default function App() {
   NavigationBar.setBehaviorAsync("overlay-swipe");
 
   return (
-    <View style={styles.container}>
+    <View style={appStyles.container}>
       <StatusBar style="auto" hidden={true} />
-      {/* <SplashScreen /> */}
-      {/* <AccessIndexScreen /> */}
       {/* <SplashToAccessNavigation /> */}
       <MainScreen />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const appStyles = StyleSheet.create({
   container: {
     alignItems: "center",
+    width: "100%",
+    height: "100%",
   },
 });

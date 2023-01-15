@@ -1,3 +1,4 @@
+import React from "react";
 import {StyleSheet, Dimensions} from "react-native";
 import fonts from "../../assets/fonts/fonts";
 import colors from "../../assets/colors/colors";
@@ -12,7 +13,7 @@ const HEIGHT_COMPONENT = HEIGHT - 15;
 const SCALE_AVT = HEIGHT_COMPONENT / 8;
 const COPY_IC = SCALE_AVT / 3;
 
-const styles = StyleSheet.create({
+const mainStyles = StyleSheet.create({
   container: {
     alignItems: "center",
     justifyContent: "center",
@@ -29,9 +30,6 @@ const styles = StyleSheet.create({
     width: WIDTH_COMPONENT,
     height: HEIGHT_COMPONENT / 5,
     overflow: "hidden",
-    zIndex: 1000,
-    opacity: 1,
-    position: "relative",
   },
   indexBottomContainer: {
     flexDirection: "row",
@@ -39,10 +37,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: WIDTH_COMPONENT,
     height: HEIGHT_COMPONENT - HEIGHT_COMPONENT / 5,
-    zIndex: 1000,
-    opacity: 1,
-    position: "relative",
-
   },
   profileBlock: {
     flexDirection: "column",
@@ -69,8 +63,8 @@ const styles = StyleSheet.create({
     borderRadius: SCALE_AVT,
     borderColor: colors.white,
     borderWidth: 0.5,
-    marginHorizontal: (HEIGHT_COMPONENT / 5 / 2) - (SCALE_AVT / 2),
-    marginVertical: (HEIGHT_COMPONENT / 5 / 2) - (SCALE_AVT / 2),
+    marginHorizontal: HEIGHT_COMPONENT / 5 / 2 - SCALE_AVT / 2,
+    marginVertical: HEIGHT_COMPONENT / 5 / 2 - SCALE_AVT / 2,
     /* Height of top component with screens / 2 and minus half of avatar size thats make avatar center*/
   },
   profileLabel: {
@@ -88,7 +82,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   profileUid: {
-    fontSize: 15,
+    fontSize: 10,
     fontFamily: fonts.font,
     color: colors.white,
     width: WIDTH_COMPONENT / 5,
@@ -121,8 +115,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   box: {
-    marginHorizontal: 5,
-    paddingHorizontal: 15,
+    marginHorizontal: 3,
+    paddingHorizontal: 3,
     justifyContent: "center",
     flexDirection: "row",
     height: "auto",
@@ -137,9 +131,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     color: colors.white,
     fontFamily: fonts.font,
-    fontSize: 15,
+    fontSize: 10,
     overflow: "hidden",
   },
 });
 
-export default styles;
+export default mainStyles;

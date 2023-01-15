@@ -5,7 +5,7 @@ import Register from "../views/AccessPanel/RegisterPanel";
 import Help from "../views/AccessPanel/HelpPanel";
 import InteractData from "../data/InteractData";
 import {View, Text, TouchableOpacity} from "react-native";
-import styles from "../styles/access_styles";
+import styles from "../styles/AccessStyle";
 import ButtonOpacity from "../styles/Animated/ButtonOpacity";
 
 export default function AccessFormNavigation() {

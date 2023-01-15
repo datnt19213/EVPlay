@@ -1,7 +1,6 @@
-import {StyleSheet} from "react-native";
+import {StyleSheet, Dimensions} from "react-native";
 import fonts from "../../assets/fonts/fonts";
 import colors from "../../assets/colors/colors";
-import {Dimensions} from "react-native";
 import ButtonOpacity from "./Animated/ButtonOpacity";
 
 const WIDTH = Dimensions.get("window").width;

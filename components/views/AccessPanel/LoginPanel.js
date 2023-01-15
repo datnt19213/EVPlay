@@ -1,6 +1,6 @@
 import React from "react";
 import {Text, TextInput, TouchableOpacity, View} from "react-native";
-import styles from "../../styles/access_styles";
+import styles from "../../styles/AccessStyle.js";
 import colors from "../../../assets/colors/colors";
 import ButtonOpacity from "../../styles/Animated/ButtonOpacity";
 import Animated from "react-native-reanimated";

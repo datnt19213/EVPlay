@@ -1,5 +1,5 @@
 import React from "react";
-import {ImageBackground, StatusBar, StyleSheet, Text, View} from "react-native";
+import {ImageBackground, StyleSheet, View} from "react-native";
 import ImageSplashScreen from "../../assets/images/SplashScreen.gif";
 
 export default function SplashScreen() {

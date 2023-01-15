@@ -2,12 +2,12 @@ import React from "react";
 
 import {View} from "react-native";
 
-import TopScreen from "./TopPanel/TopScreen";
-import styles from "../../styles/main_scr_styles";
+import TopScreen from "./MainPanel/TopScreen";
+import mainStyles from "../styles/MainScrStyle.js";
 
 const MainTopIndexScreen = () => {
   return (
-    <View >
+    <View style={mainStyles.indexTopContainer}>
       <TopScreen />
     </View>
   );

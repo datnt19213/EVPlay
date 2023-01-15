@@ -1,6 +1,6 @@
 import React from "react";
 import {ScrollView, Text, View} from "react-native";
-import styles from "../../styles/access_styles";
+import styles from "../../styles/AccessStyle.js";
 import Animated from "react-native-reanimated";
 import FadeAnim from "../../styles/Animated/FadeAnim";
 

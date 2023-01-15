@@ -3,31 +3,31 @@ import {View} from "react-native";
 import * as ScreenOrientation from "expo-screen-orientation";
 import * as NavigationBar from "expo-navigation-bar";
 
-import styles from "../styles/main_scr_styles";
+import mainStyles from "../styles/MainScrStyle.js";
 import Paralaxlayers from "../styles/Animated/ParalaxLayers";
-import MainTopIndexScreen from "../views/MainPanel/MainTopIndexScreen";
-import MainBottomIndexScreen from "../views/MainPanel/MainBottomIndexScreen";
+import MainTopIndexScreen from "./MainTopIndexScreen.js";
+import MainBottomIndexScreen from "./MainBottomIndexScreen.js";
 
 import layer1 from "../../assets/images/Screen_layout_0.png";
 import layer2 from "../../assets/images/Screen_layout_1.png";
 import layer3 from "../../assets/images/Screen_layout_2.png";
 
 const MainScreen = () => {
-  async function changeScreenOrientation() {
-    await ScreenOrientation.lockAsync(
-      ScreenOrientation.OrientationLock.LANDSCAPE
-    );
-  }
-  changeScreenOrientation();
+  // async function changeScreenOrientation() {
+  //   await ScreenOrientation.lockAsync(
+  //     ScreenOrientation.OrientationLock.LANDSCAPE
+  //   );
+  // }
+  // changeScreenOrientation();
 
-  NavigationBar.setPositionAsync("absolute");
-  NavigationBar.setVisibilityAsync("hidden");
-  NavigationBar.setBehaviorAsync("overlay-swipe");
-  
+  // NavigationBar.setPositionAsync("absolute");
+  // NavigationBar.setVisibilityAsync("hidden");
+  // NavigationBar.setBehaviorAsync("overlay-swipe");
+
   return (
-    <View style={styles.container}>
+    <View style={mainStyles.container}>
       <Paralaxlayers layers={[layer1, layer2, layer3]} />
-      <View style={[styles.container, styles.indexContainer]}>
+      <View style={[mainStyles.container, mainStyles.indexContainer]}>
         <MainTopIndexScreen />
         <MainBottomIndexScreen />
       </View>

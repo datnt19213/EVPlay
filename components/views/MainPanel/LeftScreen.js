@@ -1,11 +1,11 @@
 import React from "react";
 import {Text, View} from "react-native";
-import styles from "../../../styles/main_scr_styles";
-import DarkLayout from "../../../../assets/images/Dark_Layout.png";
+import mainStyles from "../../styles/MainScrStyle";
+import DarkLayout from "../../../assets/images/Dark_Layout.png";
 
 const LeftScreen = () => {
   return (
-    <View >
+    <View>
       <Text>hello left</Text>
     </View>
   );
