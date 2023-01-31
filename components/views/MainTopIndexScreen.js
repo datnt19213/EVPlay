@@ -1,16 +1,39 @@
-import React from "react";
+import React, {Component} from "react";
+import {Image, ImageBackground, Text, View} from "react-native";
 
-import {View} from "react-native";
-
-import TopScreen from "./MainPanel/TopScreen";
 import mainStyles from "../styles/MainScrStyle.js";
+import DarkLayout from "../../assets/images/Dark_Layout.png";
+import CopyIcon from "../../assets/images/icon_ic/Copy_ic.png";
 
-const MainTopIndexScreen = () => {
+import ResourceBox from "./MainPanel/ResourceBox.js";
+
+export default function MainTopIndexScreen() {
   return (
     <View style={mainStyles.indexTopContainer}>
-      <TopScreen />
+      <View style={mainStyles.profileBlock}>
+        {/* <ImageBackground
+          blurRadius={100}
+          source={DarkLayout}
+          style={mainStyles.blur}
+        /> */}
+        <View style={mainStyles.profileInfor}>
+          <View style={mainStyles.profileAvt}>
+            <Image source={DarkLayout} style={mainStyles.avt} />
+          </View>
+          <View style={mainStyles.profileLabel}>
+            <Text style={mainStyles.profileName} numberOfLines={1}>
+              Name
+            </Text>
+            <View style={mainStyles.uidCopy}>
+              <Text style={mainStyles.profileUid} numberOfLines={1}>
+                UID:123456789
+              </Text>
+              <Image style={mainStyles.copyIcon} source={CopyIcon} />
+            </View>
+          </View>
+        </View>
+      </View>
+      <ResourceBox />
     </View>
   );
-};
-
-export default MainTopIndexScreen;
+}

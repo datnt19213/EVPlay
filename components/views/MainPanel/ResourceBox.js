@@ -1,20 +1,22 @@
-import React from "react";
+import React, {Component} from "react";
 import {Image, ImageBackground, Text, View} from "react-native";
-import mainStyles from "../../styles/MainScrStyle";
+
+import mainStyles from "../../styles/MainScrStyle.js";
+
 import DarkLayout from "../../../assets/images/Dark_Layout.png";
 import PointIcon from "../../../assets/images/icon_ic/Point_ic.png";
 import LuckyGrassIcon from "../../../assets/images/icon_ic/Lucky_grass_ic.png";
 import EnergyIcon from "../../../assets/images/icon_ic/Energy_ic.png";
 import SapphireIcon from "../../../assets/images/icon_ic/Sapphire_ic.png";
 
-const ResourceBox = () => {
+export default function ResourceBox() {
   return (
     <View style={mainStyles.resourceBox}>
-      <ImageBackground
+      {/* <ImageBackground
         blurRadius={100}
         source={DarkLayout}
-        style={mainStyles.resourceBgBlur}
-      />
+        style={mainStyles.blur}
+      /> */}
       <View style={mainStyles.resourceDataBox}>
         <View style={mainStyles.box}>
           <Image source={PointIcon} style={mainStyles.resourceIcon} />
@@ -43,6 +45,4 @@ const ResourceBox = () => {
       </View>
     </View>
   );
-};
-
-export default ResourceBox;
+}

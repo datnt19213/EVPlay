@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 
-import Login from "../views/AccessPanel/LoginPanel";
-import Register from "../views/AccessPanel/RegisterPanel";
-import Help from "../views/AccessPanel/HelpPanel";
-import InteractData from "../data/InteractData";
+import Login from "../views/AccessPanel/LoginPanel.js";
+import Register from "../views/AccessPanel/RegisterPanel.js";
+import Help from "../views/AccessPanel/HelpPanel.js";
+import InteractData from "../data/InteractData.js";
 import {View, Text, TouchableOpacity} from "react-native";
-import styles from "../styles/AccessStyle";
-import ButtonOpacity from "../styles/Animated/ButtonOpacity";
+import styles from "../styles/AccessStyle.js";
+import ButtonOpacity from "../styles/Animated/ButtonOpacity.js";
 
 export default function AccessFormNavigation() {
   const [loginIsShow, setLoginIsShow] = useState(InteractData.show);

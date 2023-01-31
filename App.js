@@ -6,8 +6,8 @@ import SpriteSheet from "rn-sprite-sheet";
 import {GameEngine} from "react-native-game-engine";
 import Matter from "matter-js";
 
-import SplashToAccessNavigation from "./components/controller/SplashToAccessNavigation";
-import MainScreen from "./components/views/MainScreen";
+import SplashToAccessNavigation from "./components/controller/SplashToAccessNavigation.js";
+import MainScreen from "./components/views/MainScreen.js";
 
 export default function App() {
   async function changeScreenOrientation() {

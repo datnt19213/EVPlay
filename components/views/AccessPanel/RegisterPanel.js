@@ -1,10 +1,10 @@
 import React from "react";
 import {Text, TextInput, TouchableOpacity, View} from "react-native";
 import styles from "../../styles/AccessStyle.js";
-import colors from "../../../assets/colors/colors";
-import ButtonOpacity from "../../styles/Animated/ButtonOpacity";
+import colors from "../../../assets/colors/colors.js";
+import ButtonOpacity from "../../styles/Animated/ButtonOpacity.js";
 import Animated from "react-native-reanimated";
-import FadeAnim from "../../styles/Animated/FadeAnim";
+import FadeAnim from "../../styles/Animated/FadeAnim.js";
 
 export default function RegisterPanel() {
   return (

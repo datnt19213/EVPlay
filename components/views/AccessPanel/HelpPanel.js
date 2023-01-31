@@ -1,8 +1,9 @@
 import React from "react";
 import {ScrollView, Text, View} from "react-native";
 import styles from "../../styles/AccessStyle.js";
+import FadeAnim from "../../styles/Animated/FadeAnim.js";
+
 import Animated from "react-native-reanimated";
-import FadeAnim from "../../styles/Animated/FadeAnim";
 
 export default function RegisterPanel() {
   return (
