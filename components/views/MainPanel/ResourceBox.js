@@ -1,23 +1,24 @@
 import React, {Component} from "react";
-import {Image, ImageBackground, Text, View} from "react-native";
+import {Image, Text, TouchableOpacity, View} from "react-native";
 
 import mainStyles from "../../styles/MainScrStyle.js";
+import ButtonOpacity from "../../styles/Animated/ButtonOpacity.js";
 
-import DarkLayout from "../../../assets/images/Dark_Layout.png";
 import PointIcon from "../../../assets/images/icon_ic/Point_ic.png";
 import LuckyGrassIcon from "../../../assets/images/icon_ic/Lucky_grass_ic.png";
 import EnergyIcon from "../../../assets/images/icon_ic/Energy_ic.png";
 import SapphireIcon from "../../../assets/images/icon_ic/Sapphire_ic.png";
 
+import ConversionManualPopUp from "../PopUpPanel/ConversionManualPopUp.js";
+
 export default function ResourceBox() {
   return (
     <View style={mainStyles.resourceBox}>
-      {/* <ImageBackground
-        blurRadius={100}
-        source={DarkLayout}
-        style={mainStyles.blur}
-      /> */}
-      <View style={mainStyles.resourceDataBox}>
+      <TouchableOpacity
+        style={mainStyles.resourceDataBox}
+        activeOpacity={ButtonOpacity.button}
+        onPress={ConversionManualPopUp}
+      >
         <View style={mainStyles.box}>
           <Image source={PointIcon} style={mainStyles.resourceIcon} />
           <Text style={mainStyles.valueBox} numberOfLines={1}>
@@ -42,7 +43,7 @@ export default function ResourceBox() {
             123
           </Text>
         </View>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 }

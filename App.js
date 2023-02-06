@@ -8,6 +8,7 @@ import Matter from "matter-js";
 
 import SplashToAccessNavigation from "./components/controller/SplashToAccessNavigation.js";
 import MainScreen from "./components/views/MainScreen.js";
+import {setStatusBarTranslucent} from "expo-status-bar";
 
 export default function App() {
   async function changeScreenOrientation() {
@@ -23,7 +24,12 @@ export default function App() {
 
   return (
     <View style={appStyles.container}>
-      <StatusBar style="auto" hidden={true} />
+      <StatusBar
+        style="auto"
+        hidden={true}
+        backgroundColor={"transparent"}
+        translucent={true}
+      />
       {/* <SplashToAccessNavigation /> */}
       <MainScreen />
     </View>

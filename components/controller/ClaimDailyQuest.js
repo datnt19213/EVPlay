@@ -1,34 +1,36 @@
 import React, {useState, useEffect} from "react";
-import Midnight from "react-native-midnight";
 
 import mainStyles from "../styles/MainScrStyle";
+import INTERACT_DATA from "../data/InteractData";
 import {Image, Text} from "react-native";
-import Collected from "../../assets/images/icon_ic/Claimed.png";
+import Collected from "../../assets/images/icon_ic/Claimed_ic.png";
 
 const ClaimDailyQuest = (questStatus) => {
   const [status, setStatus] = useState(questStatus);
-  var getMinute;
 
   const resetDailyQuest = () => {
     setStatus(questStatus);
   };
 
-  useEffect(() => {
-    const resetListener = Midnight.addListener(() => {
-      resetDailyQuest();
-    });
-    return () => resetListener.remove();
-  }, []);
+  // setTimeout(() => {
+  //   resetDailyQuest();
+  // }, INTERACT_DATA.timeReset);
+  setTimeout(() => {
+    resetDailyQuest();
+  }, 3000);
 
   const Claimed = () => {
-    getMinute = new Date().getMinutes();
     setStatus(true);
   };
 
   //Claim presss if the current quest status EQUAL to the default quest status (=false) ==> not to claim,
   // else (=true (different to default status)) ==> claimed
-  if (questStatus === status) {
-    return <Text onPress={Claimed}>Claim</Text>;
+  if (status.valueOf() === questStatus) {
+    return (
+      <Text onPress={Claimed} style={mainStyles.questClaimBtn}>
+        Get
+      </Text>
+    );
   }
   return (
     <>

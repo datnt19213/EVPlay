@@ -1,10 +1,21 @@
-import {StyleSheet, Dimensions} from "react-native";
+import {StyleSheet} from "react-native";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 import fonts from "../../assets/fonts/fonts";
 import colors from "../../assets/colors/colors";
 import ButtonOpacity from "./Animated/ButtonOpacity";
 
-const WIDTH = Dimensions.get("window").width;
-const HEIGHT = Dimensions.get("window").height;
+const WIDTH = hp("100%");
+const HEIGHT = wp("100%");
+
+const INPUT_WIDTH = WIDTH / 3;
+const INPUT_HEIGHT = HEIGHT / 8;
+
+const FONT_SIZE_1 = INPUT_HEIGHT / 2;
+const FONT_SIZE_2 = INPUT_HEIGHT / 2.5;
+const FONT_SIZE_3 = INPUT_HEIGHT / 3.5;
 
 const styles = StyleSheet.create({
   container: {
@@ -14,88 +25,111 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   accessImageBackground: {
-    flex: 1,
     width: "100%",
     height: "100%",
-    justifyContent: "center",
   },
   titleLogin: {
     fontFamily: fonts.font,
-    fontSize: WIDTH / 30,
+    fontSize: FONT_SIZE_1,
     color: colors.white,
     alignSelf: "center",
-    marginBottom: 15,
   },
   loginForm: {
     borderColor: colors.yellow,
     borderRightWidth: 1,
-    paddingVertical: 15,
+    justifyContent: "center",
     height: HEIGHT / 2,
     width: WIDTH / 2.5,
+    marginVertical: FONT_SIZE_1,
   },
   inputLogin: {
     borderBottomColor: colors.white,
+    fontFamily: fonts.font,
     borderBottomWidth: 1,
-    fontSize: 15,
+    fontSize: FONT_SIZE_3,
     color: colors.white,
-    paddingHorizontal: 8,
-    marginHorizontal: 30,
-    marginVertical: 15,
+    paddingHorizontal: FONT_SIZE_3 / 2,
+    marginHorizontal: FONT_SIZE_1,
+    marginVertical: FONT_SIZE_3,
   },
 
   loginFormBtn: {
-    backgroundColor: colors.greenLight,
-    marginVertical: 15,
-    marginHorizontal: 8,
-    paddingHorizontal: 30,
+    width: INPUT_WIDTH / 3,
+    height: INPUT_HEIGHT / 1.5,
+    justifyContent: "center",
+    alignSelf: "center",
+    marginVertical: FONT_SIZE_2,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderLeftWidth: StyleSheet.hairlineWidth,
+    borderColor: colors.yellow,
+    shadowColor: colors.darkTransparent,
+    shadowOffset: {
+      width: 5,
+      height: 0,
+    },
+    elevation: 3,
+  },
+
+  txtSubmitFormBtn: {
+    color: colors.white,
     justifyContent: "center",
     alignItems: "center",
     alignSelf: "center",
-    paddingVertical: 5,
-    borderRadius: 30,
+    fontSize: FONT_SIZE_3,
+    fontFamily: fonts.font,
+    paddingTop: FONT_SIZE_3 / 5,
   },
 
   textLoginBtn: {
     justifyContent: "center",
     color: colors.white,
-    fontSize: 15,
+    fontFamily: fonts.font,
+    fontSize: FONT_SIZE_3,
   },
 
   formAccess: {
-    flex: 1,
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    left: 50,
+    left: INPUT_HEIGHT,
   },
   formAccessBtn: {
-    marginHorizontal: 30,
+    marginHorizontal: FONT_SIZE_1,
+    justifyContent: "space-between",
   },
   loginAccessBtn: {
-    marginVertical: 8,
+    marginVertical: FONT_SIZE_3,
+    justifyContent: "center",
   },
   RegisterAccessBtn: {
-    marginVertical: 8,
+    marginVertical: FONT_SIZE_3,
+    justifyContent: "center",
   },
   HelpAccessBtn: {
-    marginVertical: 8,
+    marginVertical: FONT_SIZE_3,
+    justifyContent: "center",
   },
 
   helpView: {
-    textAlign: "justify",
-    fontSize: 15,
+    fontSize: FONT_SIZE_3,
+    fontFamily: fonts.font,
     color: colors.dark,
-    marginHorizontal: 5,
-    paddingHorizontal: 15,
-    paddingVertical: 10,
+    paddingHorizontal: INPUT_HEIGHT / 3,
     backgroundColor: colors.white,
-    // borderRadius: 15,
-    height: HEIGHT / 2.5,
+  },
+
+  borderRadius: {
+    borderRadius: FONT_SIZE_3,
+    marginHorizontal: FONT_SIZE_3,
+    overflow: "hidden",
+  },
+
+  textDeco: {
+    textAlign: "justify",
   },
 
   scrollView: {
-    height: "auto",
-    paddingVertical: 10,
+    paddingVertical: INPUT_HEIGHT / 5,
   },
 });
 

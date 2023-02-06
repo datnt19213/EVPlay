@@ -18,25 +18,28 @@ export default function RegisterPanel() {
         <TextInput
           placeholder="Username"
           placeholderTextColor={colors.white}
+          cursorColor={colors.yellow}
           style={styles.inputLogin}
         />
         <TextInput
           secureTextEntry={true}
           placeholder="Password"
           placeholderTextColor={colors.white}
+          cursorColor={colors.yellow}
           style={styles.inputLogin}
         />
         <TextInput
           secureTextEntry={true}
           placeholder="Confirm Password"
           placeholderTextColor={colors.white}
+          cursorColor={colors.yellow}
           style={styles.inputLogin}
         />
         <TouchableOpacity
           style={styles.loginFormBtn}
           activeOpacity={ButtonOpacity.button}
         >
-          <Text style={styles.textLoginBtn}>CREATE</Text>
+          <Text style={styles.txtSubmitFormBtn}>CREATE</Text>
         </TouchableOpacity>
       </View>
     </Animated.View>

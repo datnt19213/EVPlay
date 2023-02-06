@@ -2,7 +2,7 @@ import React from "react";
 let INTERACT_DATA = {
   show: true,
   hide: false,
-  status: false,
+  timeReset: 24 * 60 * 60 * 1000,
 };
 
 export default INTERACT_DATA;

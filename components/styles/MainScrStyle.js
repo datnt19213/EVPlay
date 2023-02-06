@@ -6,10 +6,9 @@ import {
 } from "react-native-responsive-screen";
 import fonts from "../../assets/fonts/fonts.js";
 import colors from "../../assets/colors/colors.js";
-import ButtonOpacity from "./Animated/ButtonOpacity.js";
 
-const HEIGHT = wp("100%");
 const WIDTH = hp("100%");
+const HEIGHT = wp("100%");
 
 const WIDTH_COMPONENT = WIDTH - 50;
 const HEIGHT_COMPONENT = HEIGHT - 15;
@@ -30,7 +29,6 @@ const mainStyles = StyleSheet.create({
     top: 0,
     bottom: 0,
     position: "absolute",
-    backgroundColor: "rgba(255,100,100,0.5)",
     minWidth: WIDTH / 2,
     width: WIDTH_COMPONENT,
     // overflow: "hidden",
@@ -38,7 +36,6 @@ const mainStyles = StyleSheet.create({
   indexTopContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    backgroundColor: "rgba(255,0,100,0.5)",
     overflow: "hidden",
     maxHeight: SCALE_AVT + 15,
     height: "100%",
@@ -46,7 +43,6 @@ const mainStyles = StyleSheet.create({
   indexBottomContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    backgroundColor: "rgba(255,100,0,0.5)",
     overflow: "hidden",
     maxHeight: HEIGHT_COMPONENT - SCALE_AVT - 30,
     height: "100%",
@@ -83,7 +79,6 @@ const mainStyles = StyleSheet.create({
     color: colors.white,
     fontFamily: fonts.font,
     fontSize: FONT_SIZE_1,
-    backgroundColor: "rgba(205,100,0,0.5)",
     overflow: "hidden",
   },
   uidCopy: {
@@ -93,18 +88,17 @@ const mainStyles = StyleSheet.create({
     color: colors.white,
     fontFamily: fonts.font,
     fontSize: FONT_SIZE_3,
-    backgroundColor: "rgba(250,10,0,0.5)",
     overflow: "hidden",
+    width: SCALE_AVT * 1.5,
   },
   copyIcon: {
     width: COPY_IC,
     height: COPY_IC,
     marginHorizontal: 15,
-    backgroundColor: "rgba(20, 255, 2, 0.5)",
   },
   resourceBox: {
     justifyContent: "center",
-    backgroundColor: "rgba(5,5,25,0.5)",
+    // backgroundColor: "rgba(5,5,25,0.5)",
   },
   resourceDataBox: {
     flexDirection: "row",
@@ -118,41 +112,51 @@ const mainStyles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     marginHorizontal: 15,
-    backgroundColor: "rgba(200,20,200,0.5)",
+    // backgroundColor: "rgba(200,20,200,0.5)",
     overflow: "hidden",
   },
   resourceIcon: {
     width: 30,
     height: 30,
-    backgroundColor: "rgba(200,200,20,0.5)",
+    // backgroundColor: "rgba(200,200,20,0.5)",
   },
   valueBox: {
     fontFamily: fonts.font,
     fontSize: FONT_SIZE_3,
     color: colors.white,
   },
+
+  //Left
+
   questBox: {
-    backgroundColor: "rgba(255,255,255,0.5)",
+    backgroundColor: colors.darkTransparent,
     width: WIDTH_COMPONENT / 3,
-    justifyContent: "center",
+    height: HEIGHT_COMPONENT - SCALE_AVT - 50,
+    justifyContent: "flex-end",
+    alignSelf: "flex-end",
   },
   questBoxTitle: {
-    marginVertical: 8,
+    width: WIDTH_COMPONENT / 3,
+    marginVertical: 3,
+    paddingVertical: SCALE_AVT / 8,
+    textAlign: "center",
     alignSelf: "center",
-    backgroundColor: "rgba(25, 25, 150, 0.5)",
     color: colors.yellow,
+    borderBottomColor: colors.yellow,
+    borderBottomWidth: StyleSheet.hairlineWidth,
   },
   questItem: {
-    backgroundColor: "rgba(255,255,0,0.5)",
-    marginVertical: 3,
+    marginVertical: 0.5,
     maxWidth: WIDTH_COMPONENT / 3,
     height: HEIGHT_COMPONENT / 8,
     paddingHorizontal: 5,
     paddingVertical: 5,
     flexDirection: "row",
     alignItems: "center",
-    // overflow: "hidden",
+    overflow: "hidden",
     justifyContent: "space-between",
+    borderBottomColor: colors.yellow,
+    borderBottomWidth: StyleSheet.hairlineWidth,
   },
   questImage: {
     width: SCALE_AVT / 2,
@@ -161,8 +165,8 @@ const mainStyles = StyleSheet.create({
   },
   questInfo: {
     overflow: "hidden",
-    backgroundColor: "rgba(2, 5, 255,0.5)",
-    width: WIDTH_COMPONENT / 3 / 1.5,
+    maxWidth: WIDTH_COMPONENT / 3 / 1.3,
+    width: WIDTH_COMPONENT / 3 / 1.3,
     alignSelf: "center",
   },
   questTitle: {
@@ -170,18 +174,121 @@ const mainStyles = StyleSheet.create({
     fontSize: FONT_SIZE_3,
     color: colors.white,
     borderColor: colors.white,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    backgroundColor: "rgba(22, 52, 52,0.5)",
   },
   questDesc: {
     fontFamily: fonts.font,
     fontSize: FONT_SIZE_3,
     color: colors.yellow,
-    backgroundColor: "rgba(25, 55, 225,0.5)",
+  },
+  questClaimBtn: {
+    width: SCALE_AVT / 2,
+    height: SCALE_AVT / 2,
+    fontFamily: fonts.font,
+    fontSize: FONT_SIZE_2,
+    color: colors.white,
+    borderColor: colors.yellow,
+    borderWidth: 0.5,
+    alignContent: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    borderRadius: SCALE_AVT / 2,
+    textAlignVertical: "center",
   },
   claimed: {
     width: SCALE_AVT / 2,
     height: SCALE_AVT / 2,
+  },
+
+  //Right
+
+  playBlock: {
+    flexDirection: "column",
+    // backgroundColor: "rgba(255, 255, 255, 0.5)",
+    width: WIDTH / 3.8,
+    height: WIDTH / 3.8,
+    right: SCALE_AVT,
+    alignItems: "center",
+    alignSelf: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+    transform: [{rotate: "-45deg"}],
+  },
+  blockGroup: {
+    flexDirection: "row",
+    // backgroundColor: "rgba(255, 255, 2, 0.5)",
+    marginVertical: SCALE_AVT / 13,
+  },
+  blockBtn: {
+    maxWidth: WIDTH / 3 / 2.8,
+    maxHeight: WIDTH / 3 / 2.8,
+    width: WIDTH / 3 / 2.8,
+    height: WIDTH / 3 / 2.8,
+    marginHorizontal: SCALE_AVT / 13,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: SCALE_AVT / 5,
+    overflow: "hidden",
+  },
+
+  block1: {
+    backgroundColor: colors.yellow,
+    elevation: 3,
+  },
+  block2: {
+    backgroundColor: colors.greenLight,
+    elevation: 3,
+  },
+  block3: {
+    backgroundColor: colors.darkpPurple,
+    elevation: 3,
+  },
+  block4: {
+    backgroundColor: colors.blueLight,
+    elevation: 3,
+  },
+
+  txtBlockBtn: {
+    alignSelf: "center",
+    fontFamily: fonts.font,
+    color: colors.white,
+    fontSize: FONT_SIZE_1,
+    transform: [{rotate: "45deg"}],
+    textShadowColor: colors.dark,
+    textShadowRadius: 8,
+  },
+
+  //Center
+
+  charOutline: {
+    width: WIDTH_COMPONENT / 3,
+    overflow: "hidden",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  charImage: {
+    width: WIDTH_COMPONENT / 3,
+    height: HEIGHT_COMPONENT / 1.5,
+    alignSelf: "center",
+    left: -SCALE_AVT / 2,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  blockIcon: {
+    width: "100%",
+    height: "100%",
+  },
+
+  blockIcon1: {
+    transform: [{rotate: "45deg"}, {scale: 1.3}],
+  },
+  blockIcon2: {
+    transform: [{rotate: "45deg"}, {scale: 1}],
+  },
+  blockIcon3: {
+    transform: [{rotate: "45deg"}, {scale: 1}],
+  },
+  blockIcon4: {
+    transform: [{rotate: "45deg"}, {scale: 0.8}],
   },
 });
 

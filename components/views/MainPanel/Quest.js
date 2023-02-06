@@ -1,7 +1,7 @@
 import React from "react";
-import {Image, View, Text, TouchableOpacity} from "react-native";
+import {Image, View, Text} from "react-native";
 import mainStyles from "../../styles/MainScrStyle";
-import QuestImage from "../../../assets/images/Dark_Layout.png";
+import QuestImage from "../../../assets/images/icon_ic/questIcon_ic.png";
 
 import ClaimDailyQuest from "../../controller/ClaimDailyQuest.js";
 
