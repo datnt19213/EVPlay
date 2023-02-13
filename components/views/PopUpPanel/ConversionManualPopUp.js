@@ -1,8 +1,16 @@
 import React from "react";
-import {Alert} from "react-native";
+import {Alert, StyleSheet, Text, View} from "react-native";
+
+import convManualStyles from "../../styles/ConvManualPopUpStyle.js";
+
+import ConvManualNavigation from "../../controller/ConvManualNavigation.js";
 
 const ConversionManualPopUp = () => {
-  Alert.alert("Profile", "Hello ConversionManualPopUp!");
+  return (
+    <View style={[convManualStyles.conversionForm, StyleSheet.absoluteFill]}>
+      <ConvManualNavigation />
+    </View>
+  );
 };
 
 export default ConversionManualPopUp;

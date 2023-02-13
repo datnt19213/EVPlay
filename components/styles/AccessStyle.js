@@ -77,14 +77,15 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     fontSize: FONT_SIZE_3,
     fontFamily: fonts.font,
-    paddingTop: FONT_SIZE_3 / 5,
   },
 
   textLoginBtn: {
     justifyContent: "center",
+    textAlignVertical: "center",
     color: colors.white,
     fontFamily: fonts.font,
     fontSize: FONT_SIZE_3,
+    height: FONT_SIZE_1 * 1.8,
   },
 
   formAccess: {
@@ -94,19 +95,21 @@ const styles = StyleSheet.create({
     left: INPUT_HEIGHT,
   },
   formAccessBtn: {
+    top: INPUT_HEIGHT / 5,
     marginHorizontal: FONT_SIZE_1,
+    flexDirection: "column",
     justifyContent: "space-between",
   },
   loginAccessBtn: {
-    marginVertical: FONT_SIZE_3,
+    marginVertical: FONT_SIZE_3 / 3,
     justifyContent: "center",
   },
   RegisterAccessBtn: {
-    marginVertical: FONT_SIZE_3,
+    marginVertical: FONT_SIZE_3 / 3,
     justifyContent: "center",
   },
   HelpAccessBtn: {
-    marginVertical: FONT_SIZE_3,
+    marginVertical: FONT_SIZE_3 / 3,
     justifyContent: "center",
   },
 

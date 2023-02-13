@@ -61,6 +61,70 @@ const profileStyles = StyleSheet.create({
     width: SCALE_AVT / 2,
     height: SCALE_AVT / 2,
   },
+
+  profileForm: {
+    backgroundColor: colors.darkTransparent,
+    width: WIDTH - WIDTH / 5 - WIDTH / 30,
+    height: HEIGHT - WIDTH / 5 + WIDTH / 30,
+    alignSelf: "center",
+    transform: [
+      {translateY: (WIDTH / 5 - WIDTH / 30) / 2},
+      {translateX: WIDTH / 5 / 2},
+    ],
+    borderRadius: SCALE_AVT / 3,
+    paddingHorizontal: WIDTH / 30,
+    paddingVertical: HEIGHT / 30,
+    flexDirection: "column",
+    justifyContent: "space-between",
+    overflow: "hidden",
+  },
+
+  profileStatus: {
+    paddingHorizontal: SCALE_AVT / 2,
+    paddingBottom: SCALE_AVT / 2,
+    paddingTop: SCALE_AVT / 3,
+    borderRadius: SCALE_AVT,
+    shadowColor: colors.darkTransparent,
+    elevation: 15,
+  },
+
+  profileLevel: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingHorizontal: FONT_SIZE_3,
+    paddingVertical: FONT_SIZE_3 / 5,
+  },
+
+  profileLevelNumber: {
+    fontFamily: fonts.font,
+    fontSize: FONT_SIZE_2,
+    color: colors.yellow,
+  },
+
+  profileLevelExp: {
+    color: colors.yellow,
+    fontFamily: fonts.font,
+    fontSize: FONT_SIZE_2,
+  },
+
+  profileLevelProgress: {
+    height: SCALE_AVT / 13,
+    borderRadius: SCALE_AVT / 13,
+  },
+
+  profileLevelProgressBar: {
+    backgroundColor: colors.white,
+  },
+
+  profileDesc: {
+    backgroundColor: colors.darkTransparent,
+    height: (HEIGHT - WIDTH / 5 + WIDTH / 30) / 2.5,
+    borderRadius: SCALE_AVT / 3,
+    paddingHorizontal: SCALE_AVT / 3,
+    fontFamily: fonts.font,
+    fontSize: FONT_SIZE_2,
+    color: colors.white,
+  },
 });
 
 export default profileStyles;

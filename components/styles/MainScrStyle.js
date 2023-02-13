@@ -25,6 +25,7 @@ const mainStyles = StyleSheet.create({
     height: "100%",
   },
   indexContainer: {
+    alignSelf: "center",
     marginVertical: 15,
     top: 0,
     bottom: 0,
@@ -154,7 +155,7 @@ const mainStyles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     overflow: "hidden",
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
     borderBottomColor: colors.yellow,
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
@@ -181,8 +182,8 @@ const mainStyles = StyleSheet.create({
     color: colors.yellow,
   },
   questClaimBtn: {
-    width: SCALE_AVT / 2,
-    height: SCALE_AVT / 2,
+    width: SCALE_AVT / 1.8,
+    height: SCALE_AVT / 1.8,
     fontFamily: fonts.font,
     fontSize: FONT_SIZE_2,
     color: colors.white,

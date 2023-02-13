@@ -1,29 +1,44 @@
 import React, {useState} from "react";
-import {
-  Dimensions,
-  Image,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import Modal from "react-native-modal";
+import {Audio} from "expo-av";
 
 import profileStyles from "../styles/ProfilePopUpStyle";
-import ProfilePopUp from "../views/PopUpPanel/ProfilePopUp";
+import mainStyles from "../styles/MainScrStyle";
+
 import DarkLayout from "../../assets/images/Dark_Layout.png";
 import CloseIcon from "../../assets/images/icon_ic/Close_ic.png";
 import MessageLayout from "../../assets/images/Message_layout.png";
-import mainStyles from "../styles/MainScrStyle";
+
 import ButtonOpacity from "../styles/Animated/ButtonOpacity.js";
 import CopyToClipboard from "./CopyToClipboard";
+import ProfilePopUp from "../views/PopUpPanel/ProfilePopUp";
+import ProfileBox from "../views/MainPanel/ProfileBox";
+import SFX from "../data/SFX.js";
 
 const ShowProfilePopUp = () => {
   const [isModalVisible, setModalVisible] = useState(false);
 
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
+
+    playSound();
   };
+
+  const [sound, setSound] = React.useState();
+  async function playSound() {
+    const {sound} = await Audio.Sound.createAsync(SFX.click);
+    setSound(sound);
+    await sound.playAsync();
+  }
+
+  React.useEffect(() => {
+    return sound
+      ? () => {
+          sound.unloadAsync();
+        }
+      : undefined;
+  }, [sound]);
 
   return (
     <>
@@ -32,22 +47,7 @@ const ShowProfilePopUp = () => {
         activeOpacity={ButtonOpacity.button}
         onPress={toggleModal}
       >
-        <View style={mainStyles.profileInfor}>
-          <View style={mainStyles.profileAvt}>
-            <Image source={DarkLayout} style={mainStyles.avt} />
-          </View>
-          <View style={mainStyles.profileLabel}>
-            <Text style={mainStyles.profileName} numberOfLines={1}>
-              Name
-            </Text>
-            <View style={mainStyles.uidCopy}>
-              <Text style={mainStyles.profileUid} numberOfLines={1}>
-                UID:123456789
-              </Text>
-              <CopyToClipboard />
-            </View>
-          </View>
-        </View>
+        <ProfileBox />
       </TouchableOpacity>
       <Modal
         isVisible={isModalVisible}
@@ -72,6 +72,7 @@ const ShowProfilePopUp = () => {
               <Image source={CloseIcon} style={profileStyles.closeIcon} />
             </TouchableOpacity>
           </View>
+          <ProfilePopUp />
         </View>
       </Modal>
     </>
