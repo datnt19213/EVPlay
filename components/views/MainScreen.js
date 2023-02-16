@@ -16,11 +16,6 @@ import layer3 from "../../assets/images/Screen_layout_2.png";
 import Animated from "react-native-reanimated";
 
 export default function MainScreen() {
-  var Sound = require("react-native-sound");
-  Sound.setCategory("Playback");
-  var bg = new Sound("comfortable_background.mp3", Sound.MAIN_BUNDLE);
-  bg.play();
-
   return (
     <Animated.View
       key={ZoomAnim.loginKey}

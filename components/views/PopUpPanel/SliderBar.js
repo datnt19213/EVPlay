@@ -36,7 +36,7 @@ const SliderBar = ({maxValue, minValue, nameGive, nameRecieve}) => {
         <Text style={convManualStyle.convertManualValue}>
           {sliderValue} {nameGive}
         </Text>{" "}
-        to get{" "}
+        to{" "}
         <Text style={convManualStyle.convertManualValue}>
           {value > 999999 ? (value / 1000000).toFixed(0) + "M" : value}{" "}
           {nameRecieve}

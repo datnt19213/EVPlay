@@ -228,7 +228,7 @@ const mainStyles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: SCALE_AVT / 5,
-    overflow: "hidden",
+    // overflow: "hidden",
   },
 
   block1: {
